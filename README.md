@@ -1,2 +1,2 @@
-# TicketChain
-For HackCU IV. Event ticketing on the blockchain. Increased transparency and reliability with microscopic fees.
+# FixItChain
+For HackCU IV. Track repair history for any device, and match users with spare parts to those who need them.
