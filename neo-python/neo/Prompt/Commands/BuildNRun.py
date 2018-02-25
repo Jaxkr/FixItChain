@@ -44,7 +44,7 @@ def BuildAndRun(arguments, wallet, verbose=True):
     return DoRun(contract_script, arguments, wallet, path, verbose)
 
 
-def DoRun(contract_script, arguments, wallet, path, verbose=False):
+def DoRun(contract_script, arguments, wallet, path, verbose=True):
 
 
     test = get_arg(arguments, 1)
@@ -63,7 +63,7 @@ def DoRun(contract_script, arguments, wallet, path, verbose=False):
             #print (type(result))
 
             if tx is not None and result is not None:
-                if verbose:
+                if False:
                     print("\n-----------------------------------------------------------")
                     print("Calling %s with arguments %s " % (path, i_args))
                     print("Test deploy invoke successful")

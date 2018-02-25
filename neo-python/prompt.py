@@ -949,7 +949,7 @@ class PromptInterface(object):
         f.close()
         #test 020707 07 True False 2 key value25
         if (file_input != ""):
-            neo_args = file_input.split(' ')
+            neo_args = file_input.split(';')
             print(neo_args)
 
 
@@ -962,6 +962,9 @@ class PromptInterface(object):
             tx, result, total_ops, engine = BuildAndRun(nargs, Wallet)
             print(str(result))
             f = open("com.txt", "w")
+            f.close()
+            f = open("out.txt", "w")
+            f.write(result)
             f.close()
 
         time.sleep(1)
