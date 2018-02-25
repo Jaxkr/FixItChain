@@ -7,6 +7,7 @@ from time import sleep
 # transitions, which map to HTTP verbs.
 class NEOResource(object):
     def on_get(self, req, resp):
+        resp.set_header('Access-Control-Allow-Origin', '*')
         """Handles GET requests"""
         query_items = req.params['args'].split('%')
         command = " ".join(query_items)
@@ -15,7 +16,7 @@ class NEOResource(object):
         f = open('com.txt', 'w')
         f.write(command)
         f.close()
-        sleep(2)
+        sleep(1)
         f = open('out.txt', 'r')
         output = f.read()
         f.close()
